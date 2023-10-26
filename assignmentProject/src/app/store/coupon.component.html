@@ -1,0 +1,80 @@
+<head>
+  <title>Box with Cross Icon</title>
+
+  <style>
+    .container {
+      position: relative;
+      width: 100%;
+      padding: 50px;
+      border: 1px solid #ccc;
+      margin-top: 300px;
+    }
+
+    .close-icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      color: #ff0000; 
+      font-size: 24px;
+    }
+    .success-message {
+      color: red;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <span class="close-icon" (click)="notApplyCoupon()"
+      ><i class="fa fa-times"></i
+    ></span>
+    <h4>
+      🏆 Get Ahead in the Game! 🏀 Shop now at H & K Sports and Score Big with a
+      10% Discount on All Sports Gear. Elevate Your Performance and Savings with
+      Our Premium Selection. Use code 'SPORTS10' at checkout and make every play
+      count. Don't wait, seize the moment, and gear up for victory today! 🥇🛍️
+      #GameOn #SportsDiscount #PlayToWin
+    </h4>
+    <br />
+    <button
+      (click)="applyCoupon()"
+      class="btn btn-primary"
+      style="font-weight: bold"
+      [disabled]="isApplyed"
+    >
+      Apply Coupon
+    </button>
+    <br />
+    <div *ngIf="isApplyed" class="success-message">
+      <br />
+      <p>Coupon Applied Successfully!</p>
+    </div>
+  </div>
+</body>
+<!-- <head>
+    <title>Apply Coupon</title>
+</head>
+  <body>
+    <h1>Apply Coupon</h1>
+    <p>Enter your coupon code:</p>
+    <input type="text" placeholder="Enter coupon code" >
+    <button (click)="applyCoupon()">Apply Coupon</button>
+    <div *ngIf="couponApplied">
+      <p>Coupon Applied Successfully!</p>
+    </div>
+  </body>
+
+
+
+<h1 style="text-align: center; color: #007bff;">Apply coupon of 10%</h1>
+
+<div style="text-align: center; margin-top: 20px;">
+  <button (click)="applyCoupon()" class="btn btn-primary" style="font-weight: bold; background-color: #007bff; color: #fff;">
+    Apply Coupon
+  </button>
+
+  <button (click)="notApplyCoupon()" class="btn btn-secondary" style="font-weight: bold; background-color: #6c757d; color: #fff; margin-left:20px ;">
+    Not Apply Coupon
+  </button>
+</div> -->

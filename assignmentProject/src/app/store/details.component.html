@@ -1,0 +1,62 @@
+<head>
+  <title>Product Details</title>
+  <style>
+    .product-details {
+      max-width: 750px;
+      margin: 100px auto;
+      padding: 120px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .btn:not(:disabled):not(.disabled) {
+      margin-left: 15px;
+      cursor: pointer;
+    }
+
+    .product-image {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+    }
+
+    .product-title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .product-description {
+      margin-top: 10px;
+    }
+
+    .product-price {
+      font-size: 18px;
+      color: #007bff;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="product-details">
+    <img  src="../../../kk.jpg" alt="Product Image" />
+    <h1 class="product-title">{{ detailItem.name }}</h1>
+    <p class="product-description">{{ detailItem.description }}</p>
+    <p class="product-price">Price: ${{ detailItem.price }}</p>
+    <p>Explore our wide range of high-quality products, meticulously crafted to meet your needs. From top-tier performance and premium materials to cutting-edge technology, 
+        our collection delivers exceptional value and satisfaction. Whether you're seeking style, durability, or versatility, our products are designed to exceed your expectations. 
+        Discover a world of possibilities and elevate your lifestyle with our extensive selection</p>
+        <br>
+    <button
+      class="btn btn-success btn-sm float-right"
+      (click)="addProductToCart(detailItem)"
+    >
+      Add To Cart
+    </button>
+    <button
+      class="btn btn-success btn-sm float-right"
+      (click)="allProductToStore()"
+    >
+      Back To Store
+    </button>
+  </div>
+</body>
